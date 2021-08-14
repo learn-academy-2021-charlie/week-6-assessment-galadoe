@@ -7,7 +7,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. As a developer, I am creating an API with a model called Animal that has_many Sightings, but OOPS! I forgot to add the foreign key. How can I fix this mistake? What is the name of the foreign key? Would the foreign key be part of the Animal model or the Sightings model?
 
-  Your answer:
+  Your answer: If we forgot the foreign key, we would need to create a migration and then add the foreign key. foreign keys allows us to formalize data. It helps us to create references (links) among tables. We are only accepting information that we need 
 
   Researched answer:
 
@@ -59,4 +59,4 @@ def destroy: goes in the table, allows us to get the table one by one and delete
 
 5. As a developer, you want to make an application that will help you manage your to do list. Create 10 user stories that will help you get your application started. Read more about [user stories](https://www.atlassian.com/agile/project-management/user-stories).
   - As a user, I see a Header that says create List
-  - As a user, I can create a new List 
+  - As a user, I can create a new List
