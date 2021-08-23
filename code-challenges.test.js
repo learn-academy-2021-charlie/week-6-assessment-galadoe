@@ -35,8 +35,21 @@ var people = [
 
 // b) Create the function that makes the test pass.
 
-const sentence = () => {
-  console.log("test");
+// create a function - sentence take argument arr
+// map through the array to get each object
+// create a var and split it
+// create another var to map through the previous var for the first and last name
+// use toUpperCase and substring to capitalized and return the full string
+// return the string with interpolation
+
+const sentence = (arr) => {
+  return arr.map(value => {
+    let name = value.name.split(" ")
+    let nameCap = name.map(value => {
+      return value[0].toUpperCase() + value.substring(1)
+    }).join(" ")
+    return `${nameCap} is a ${value.occupation}.`
+  })
 }
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
@@ -58,6 +71,10 @@ describe('numbers', () => {
 
 
 // b) Create the function that makes the test pass.
+
+// create function - numbers take argument arr
+// map through the arr (filter) to get each value that is a number (typeof)
+// map through it again, but each value is a remainder of 3
 
 const numbers = (arr) => {
   return arr.filter(value => {
@@ -84,6 +101,11 @@ describe('cubedSum', () => {
 
 
 // b) Create the function that makes the test pass.
+
+// create a function - cubedSum takes in arr
+// create a var and assign it to map through the arr
+// return each value to the power of 3
+// last, use .reduce() method to do the sum of the previous values
 
 const cubedSum = (arr) => {
   let newArr = arr.map(value => {
