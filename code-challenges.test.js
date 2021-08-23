@@ -59,15 +59,19 @@ describe('numbers', () => {
 
 // b) Create the function that makes the test pass.
 
-const numbers = () => {
-  console.log("number test");
+const numbers = (arr) => {
+  return arr.filter(value => {
+    return typeof value == 'number'
+  }).map(value => {
+    return value % 3
+  })
 }
 
 // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
 
 // a) Create a test with an expect statement using the variables provided.
 
-fdescribe('cubedSum', () => {
+describe('cubedSum', () => {
     test('should return of sum of all the numbers cubed', () => {
       var cubeAndSum1 = [2, 3, 4]
       // Expected output: 99
